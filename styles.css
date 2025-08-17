@@ -1,0 +1,134 @@
+/* =======================
+Course Finder — Google Chat (PIXEL-PERFECT)
+======================= */
+
+/* ---------- Tokens ---------- */
+:root{
+--bg:#f6f7f9;
+--surface:#ffffff;
+--ink:#0f172a;
+--muted:#6b7280;
+--line:#e6eaf0;
+
+--brand:#0a7c6c;
+--brand-ink:#ffffff;
+
+--pill:#0c7a6f;
+--pill-ink:#eafdfc;
+
+--ok-bg:#e9f9ee; --ok-ink:#166534;
+--full-bg:#fde7e7; --full-ink:#b91c1c;
+--lim-bg:#fff1dc; --lim-ink:#b45309;
+--acc-bg:#e9f2ff; --acc-ink:#185fb8;
+--rep-bg:#eaf7ea; --rep-ink:#166534;
+
+--shadow:0 10px 24px rgba(15,23,42,.06);
+--radius-xl:22px;
+--radius-lg:18px;
+--radius-md:14px;
+--radius-sm:10px;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+font:16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial}
+body{-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+a{color:#0ea5e9;text-decoration:none} a:hover{text-decoration:underline}
+.container{max-width:980px;margin:28px auto;padding:0 18px}
+
+/* ---------- Header ---------- */
+.header{display:flex;align-items:center;gap:8px;margin:6px 0 12px}
+.header h1{margin:0;font-weight:800;letter-spacing:.2px;font-size:26px}
+.header em{font-style:normal;color:#0ea5e9}
+
+/* ---------- Hero card ---------- */
+.hero{
+background:var(--surface); border:1px solid var(--line);
+border-radius:var(--radius-xl); box-shadow:var(--shadow);
+padding:22px 22px; margin:12px 0 16px;
+}
+.hero h2{margin:0 0 8px;font-size:18px;font-weight:700}
+.hero p{margin:0 0 6px;color:var(--muted)}
+.hero ul{margin:8px 0 0 22px;color:var(--muted)}
+
+/* ---------- Query row ---------- */
+.row{display:flex;gap:12px;margin:12px 0 6px}
+.input{
+flex:1; background:#fff; border:1px solid var(--line);
+padding:14px 16px; border-radius:16px; outline:none; font-size:15px;
+}
+.input:focus{border-color:#cbd5e1; box-shadow:0 0 0 3px rgba(2,132,199,.08)}
+.btn{
+background:var(--brand); color:var(--brand-ink); border:0; cursor:pointer;
+padding:12px 22px; border-radius:16px; font-weight:700; letter-spacing:.2px;
+box-shadow:0 8px 18px rgba(10,124,108,.18);
+}
+.btn:disabled{opacity:.55; cursor:not-allowed}
+
+/* ---------- Status line ---------- */
+.status{color:var(--muted);margin:6px 2px}
+
+/* ---------- Actions (ghost buttons) ---------- */
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.ghost{
+background:#e7f1ef; color:#0a5a50; border:1px solid #d7e5e2;
+padding:12px 16px; border-radius:14px; font-weight:700; cursor:pointer;
+}
+.ghost:active{transform:translateY(1px)}
+
+/* ---------- Card ---------- */
+.card{
+background:var(--surface); border:1px solid var(--line);
+border-radius:var(--radius-xl); box-shadow:var(--shadow);
+padding:18px 18px; margin:14px 0;
+}
+.card-title{
+margin:2px 0 10px;
+font-size:22px; font-weight:650; letter-spacing:.1px;
+}
+
+/* top pill (city + price) */
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 10px}
+.pill{
+display:inline-flex;align-items:center;gap:8px;
+padding:7px 14px;border-radius:999px;font-weight:800;font-size:13px;
+}
+.pill--place{background:var(--pill);color:var(--pill-ink)}
+.pill small{opacity:.85;font-weight:700}
+
+/* chips row */
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:4px 0 8px}
+.badge{
+padding:6px 12px;border-radius:999px;font-weight:800;font-size:13px;
+background:#eef2f7;color:#1f2937;
+}
+.badge--blue{background:var(--acc-bg);color:var(--acc-ink)}
+.badge--rep{background:var(--rep-bg);color:var(--rep-ink)}
+.badge--ok{background:var(--ok-bg);color:var(--ok-ink)}
+.badge--full{background:var(--full-bg);color:var(--full-ink)}
+.badge--warn{background:var(--lim-bg);color:var(--lim-ink)}
+
+/* meta */
+.meta{color:var(--muted);margin-top:2px}
+.meta strong{color:#334155;font-weight:800}
+.meta .sep{opacity:.4;margin:0 6px}
+.meta a{font-weight:700}
+
+/* checkbox */
+.add{margin-top:10px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.add input{width:18px;height:18px;border-radius:4px}
+
+/* contacts block */
+.contacts{
+background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);
+box-shadow:var(--shadow);padding:16px 18px;margin:14px 0 8px
+}
+.contacts h3{margin:0 0 8px;font-size:18px}
+.contacts ul{margin:0;padding-left:18px;color:#334155}
+
+/* responsive */
+@media (max-width:640px){
+.card-title{font-size:20px}
+.btn{padding:12px 18px}
+}

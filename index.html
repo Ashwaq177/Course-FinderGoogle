@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Course Finder — Google Chat</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1>Course Finder — <em>Google Chat</em></h1>
+</header>
+
+<section class="hero">
+<h2>Hi! 👋</h2>
+<p>Tell me what you need (English or Arabic is fine). Examples:</p>
+<ul>
+<li>“First Aid Train the Trainer — September — near Yanbu — budget 700–1100 USD”</li>
+<li>“BLS Instructor in Jeddah, 3rd week of September (if no budget is given, I’ll sort cheapest → most expensive)”</li>
+</ul>
+</section>
+
+<div class="row">
+<input id="message" class="input" placeholder="Type your request…" />
+<button id="send" class="btn">Send</button>
+</div>
+
+<div id="status" class="status"></div>
+
+<section id="results"></section>
+
+<div class="actions">
+<button id="btn-contacts" class="ghost">Show vendor contacts</button>
+<button id="btn-csv" class="ghost">Create Excel (CSV) report</button>
+<button id="btn-pdf" class="ghost">Create PDF report</button>
+</div>
+
+<section id="contacts" class="contacts" style="display:none">
+<h3>Vendor contacts:</h3>
+<ul id="contacts-list"></ul>
+</section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
