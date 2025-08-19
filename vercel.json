@@ -1,0 +1,6 @@
+{
+"rewrites": [
+{ "source": "/ask", "destination": "/api/ask" },
+{ "source": "/healthz", "destination": "/api/healthz" }
+]
+}
